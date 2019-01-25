@@ -20,7 +20,7 @@ export class HomePage {
 				if (status.authorized) {
 					let scanSub = this.qr.scan().subscribe((text: string) => {
 						this.scanValue = text;
-						console.log(text);
+						alert(text);
 						this.qr.hide();
 						scanSub.unsubscribe();
 					});
