@@ -4,13 +4,14 @@ import * as feathers from '@feathersjs/feathers';
 import * as socketio from '@feathersjs/socketio-client';
 import { IService } from "./service.shape";
 import { serviceFactory } from "../factories/service";
+import { server } from "../config/enviroment";
 
 @Injectable()
 export class FeathersService {
 	private client;
 
 	constructor() {
-		const socket = io('http://localhost:3030');
+		const socket = io(server);
 
 		this.client = feathers();
 		this.client.configure(socketio(socket));
