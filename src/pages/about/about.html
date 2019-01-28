@@ -1,11 +1,17 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>
+			Config
+		</ion-title>
+	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+	<ion-list>
+		<ion-item>
+			<ion-label floating>{{ config.host || "Type host" }}</ion-label>
+			<ion-input [(ngModel)]="host"></ion-input>
+		</ion-item>
+		<button ion-button block (click)="setHost(host)">Set</button>
+	</ion-list>
 </ion-content>

@@ -20,14 +20,19 @@
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
+    "@feathersjs/feathers": "^3.3.1",
+    "@feathersjs/socketio-client": "^1.2.1",
     "@ionic-native/core": "~4.18.0",
     "@ionic-native/splash-screen": "~4.18.0",
     "@ionic-native/status-bar": "~4.18.0",
-    "@ionic/storage": "2.2.0",
+    "@ionic/storage": "^2.2.0",
+    "cordova-sqlite-storage": "2.6.0",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
+    "lodash": "^4.17.11",
     "qr-image": "^3.2.0",
     "rxjs": "5.5.11",
+    "socket.io-client": "^2.2.0",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.26"
   },
@@ -35,5 +40,10 @@
     "@ionic/app-scripts": "3.2.1",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-sqlite-storage": {}
+    }
+  }
 }
