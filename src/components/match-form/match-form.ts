@@ -54,8 +54,7 @@ export class MatchFormComponent {
 
 	async joinMatch() {
 		let player = await this.playerRepo.findOrCreate(this.name).toPromise();
-		console.log(player);
-		const matchField = ['_id'];
+		let matchField = ['_id'];
 
 		if (!this.match.player1Id) {
 			this.match.player1Id = player._id;

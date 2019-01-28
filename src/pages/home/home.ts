@@ -7,7 +7,6 @@ import { PlayerRepo } from '../../api/repositories/player';
 import { MatchRepo } from '../../api/repositories/match';
 import * as _ from 'lodash';
 import { Subscription } from 'rxjs';
-import { ignoreElements } from 'rxjs/operator/ignoreElements';
 
 @Component({
 	selector: 'page-home',
@@ -69,7 +68,6 @@ export class HomePage {
 	}
 
 	exit() {
-		console.log('exit');
 		this.players = [];
 		this.match = null;
 		this.myPlayerField = '';

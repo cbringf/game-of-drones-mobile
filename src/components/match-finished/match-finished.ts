@@ -1,4 +1,7 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
+import {
+	Component, Input,
+	Output, EventEmitter
+} from "@angular/core";
 
 @Component({
 	selector: 'match-finished',
@@ -17,7 +20,6 @@ export class MatchFinishedComponent {
 	}
 
 	continue() {
-		console.log('continue');
 		this.onContinue.emit({});
 	}
 }

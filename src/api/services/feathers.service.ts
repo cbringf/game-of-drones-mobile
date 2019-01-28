@@ -2,7 +2,6 @@ import { Injectable } from "@angular/core";
 import * as io from 'socket.io-client';
 import * as feathers from '@feathersjs/feathers';
 import * as socketio from '@feathersjs/socketio-client';
-import { IService } from "./service.shape";
 import { serviceFactory } from "../factories/service";
 import { server } from "../config/enviroment";
 

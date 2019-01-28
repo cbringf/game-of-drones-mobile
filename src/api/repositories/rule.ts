@@ -14,11 +14,11 @@ export class RuleRepo {
 	}
 
 	getMoves() {
-		console.log('moves');
 		return from(this.ruleService.find({}))
 			.pipe(map((res: any) => {
-				console.log(res);
-				return _.map(res.data, r => r.move);
+				let aux = _.map(res.data, r => r.move);
+
+				return _.uniq(aux);
 			}));
 	}
 }

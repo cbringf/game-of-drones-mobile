@@ -3,9 +3,7 @@ import { switchMap, map } from 'rxjs/operators'
 import { IPlayer } from '../models/player';
 import { FeathersService } from '../services/feathers.service';
 import { IService } from '../services/service.shape';
-import { from } from 'rxjs/observable/from';
 import { of } from 'rxjs/observable/of';
-import { serviceFactory } from '../factories/service';
 import { Observable } from 'rxjs';
 
 @Injectable()
