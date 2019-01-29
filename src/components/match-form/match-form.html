@@ -4,5 +4,5 @@
 		<ion-input type="text" [(ngModel)]="name"></ion-input>
 	</ion-item>
 	<button outline ion-button block [disabled]="!!match || !name" (click)="createMatch()">{{ createButtonText }}</button>
-	<button outline ion-button block [disabled]="!name" (click)="joinMatch()">Join match</button>
+	<button outline ion-button block [disabled]="!name || !match" (click)="joinMatch()">Join match</button>
 </ion-card>
