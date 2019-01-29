@@ -1,0 +1,14 @@
+<div *ngIf="isOnPlay; else waitMessage">
+	<p class="moves-list">Pick a move</p>
+	<ion-list *ngIf="onTurn; else othersTurn" inset>
+		<button ion-item *ngFor="let m of moves | async" (click)="play(m)">
+			{{ m }}
+		</button>
+	</ion-list>
+</div>
+<ng-template #othersTurn>
+	<p class="info-msg">{{ otherPlayer?.name }}'s turn</p>
+</ng-template>
+<ng-template #waitMessage>
+	<p class="info-msg">Waiting for players</p>
+</ng-template>

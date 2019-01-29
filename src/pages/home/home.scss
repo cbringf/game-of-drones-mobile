@@ -1,3 +1,15 @@
 page-home {
+	.player-info {
+		text-align: left;
+		font-weight: normal;
+		font-size: large;
 
+		b {
+			font-weight: bold;
+			font-size: small;
+		}
+	}
+	.player-hits {
+		font-size: xx-large;
+	}
 }
