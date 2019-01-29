@@ -2,6 +2,7 @@ import {
 	Component, Input,
 	Output, EventEmitter
 } from "@angular/core";
+import { winText, looseText } from "./config";
 
 @Component({
 	selector: 'match-finished',
@@ -16,7 +17,7 @@ export class MatchFinishedComponent {
 	}
 
 	get text() {
-		return this.winner ? 'You win!!!!' : 'You loose';
+		return this.winner ? winText : looseText;
 	}
 
 	continue() {

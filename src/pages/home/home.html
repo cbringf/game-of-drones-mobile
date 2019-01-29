@@ -7,12 +7,12 @@
 <ion-content padding>
 	<ion-list sticky>
 		<ion-item *ngIf="myPlayer">
-			<h2>Me</h2>
-			<p>Score: {{ myPlayer.record }} ---- <b>Hits: {{ myPlayer.hits }}</b></p>
+			<p class="player-info">Me <b>{{ myPlayer.record }}</b></p>
+			<p class="player-hits">{{ myPlayer.hits }}</p>
 		</ion-item>
 		<ion-item *ngIf="otherPlayer">
-			<h2>{{ otherPlayer.name }}</h2>
-			<p>Score: {{ otherPlayer.record }} ---- <b>Hits: {{ otherPlayer.hits }}</b></p>
+			<p class="player-info">{{ otherPlayer.name }} <b>{{ otherPlayer.record }}</b></p>
+			<p class="player-hits">{{ otherPlayer.hits }}</p>
 		</ion-item>
 	</ion-list>
 	<match-form (onMatchResolved)="setMatch($event)" *ngIf="!match; else matchBoard"></match-form>

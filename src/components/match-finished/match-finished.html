@@ -1,8 +1,2 @@
-<ion-card>
-	<ion-card-header>
-		{{ text }}
-	</ion-card-header>
-	<ion-card-content>
-		<button ion-button (click)="continue()">Continue</button>
-	</ion-card-content>
-</ion-card>
+<p [ngClass]="winner ? 'winner' : 'looser'">{{ text }}</p>
+<button ion-button (click)="continue()" block>Continue</button>
